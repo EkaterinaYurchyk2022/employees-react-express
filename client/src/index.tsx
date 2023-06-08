@@ -2,6 +2,7 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {ConfigProvider, theme} from 'antd';
 import {store} from './app/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -29,7 +30,11 @@ const root = createRoot(container);
 
 root.render(
     <Provider store={store}>
-      <RouterProvider router={router}/>
+        <ConfigProvider theme={{
+            algorithm: theme.darkAlgorithm
+        }}>
+            <RouterProvider router={router}/>
+        </ConfigProvider>
     </Provider>
 );
 reportWebVitals();
