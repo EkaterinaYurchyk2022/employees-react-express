@@ -55,7 +55,7 @@ const remove = async (req, res) => {
                 id
             }
         })
-        return res.status(204).json('OK');
+        return res.status(201).json('OK');
     } catch {
         res.status(500).json({message: "Не удалось удалить сотрудника"});
     }
