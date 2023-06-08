@@ -11,14 +11,14 @@ datasource db {
 }
 
 model User {
-  id             String     @id @default(uuid())
-  email          String
-  password       String
-  name           String
-  createdEmpoyee Empolyee[]
+  id              String     @id @default(uuid())
+  email           String
+  password        String
+  name            String
+  createdEmployee Employee[]
 }
 
-model Empolyee {
+model Employee {
   id        String @id @default(uuid())
   firstName String
   lastName  String
