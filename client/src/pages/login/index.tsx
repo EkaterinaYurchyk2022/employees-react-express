@@ -38,7 +38,6 @@ const Login = () => {
                 </Card>
             </Row>
         </Layout>
-
     );
 };
 
