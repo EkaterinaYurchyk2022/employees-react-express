@@ -4,9 +4,11 @@ import {api} from './services/api';
 
 export const store = configureStore({
     reducer: {
-        [api.reducerPath]:api.reducer,
-        auth
+        [api.reducerPath]: api.reducer,
+        auth,
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware)
+
 });
 
 export type AppDispatch = typeof store.dispatch;
