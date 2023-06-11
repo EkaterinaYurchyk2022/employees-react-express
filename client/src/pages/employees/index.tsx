@@ -43,10 +43,11 @@ const Employees = () => {
         }
     }, [user, navigate])
 
+    const goToAddUser = () => navigate(Paths.employeeAdd)
+
     return (
         <Layout>
-            <CustomButton type="primary" onClick={() => {
-            }} icon={<PlusCircleOutlined/>}>
+            <CustomButton type="primary" onClick={goToAddUser} icon={<PlusCircleOutlined/>}>
                 Добавить сотрудника
             </CustomButton>
             <Table

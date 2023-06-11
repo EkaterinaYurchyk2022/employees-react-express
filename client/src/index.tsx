@@ -11,6 +11,7 @@ import Login from './pages/login';
 import Register from './pages/register';
 import Auth from './features/auth/auth';
 import Employees from './pages/employees';
+import AddEmployee from './pages/addEmployee';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
         path: Paths.register,
         element: <Register/>
+    },
+    {
+        path: Paths.employeeAdd,
+        element: <AddEmployee/>
     }
 ])
 
